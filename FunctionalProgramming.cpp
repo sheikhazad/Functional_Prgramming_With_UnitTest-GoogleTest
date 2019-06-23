@@ -5,11 +5,12 @@
 
 using namespace std;
 
-/***************************************************************************
-1. A simple demo of functional programming.
-2. T = Vector or Deque
-3. TFun - Function is passed as argument by the caller, it is called again from this function.
-***************************************************************************/
+/********************************************************************************************************************
+1. A simple demo of Functional Programming with Unit Test by using GoogleTest in C++11/14
+2. T = Vector or Deque container type
+3. TFun - fun - Function parameter which is passed as argument by the caller, it is called again from this function.
+4. Different funtional behaviour is achieved by passing different function to the parameter "fun" by the caller 
+*********************************************************************************************************************/
 template<typename TFunc, typename T>
 void filterData(TFunc fun, T& iContainer, T& oContainer )
 {
