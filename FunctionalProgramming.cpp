@@ -53,9 +53,10 @@ TEST(FuntionalProgramTest, testBetween_30_And_80)
     deque<int> iDeque{10,20,30,40,50,60,70,80,90,100};
     deque<int> oDeque;
 
+    int iCapture = 30;
     //Lambda function is passed as parameter to filterData()
     //auto type for lambda function parameter is C++14 feature
-    filterData([](auto& i)->bool { return i>=30 && i<=80; }, iDeque, oDeque );
+    filterData([&](auto& i)->bool { return i>=iCapture && i <= 80; }, iDeque, oDeque );
 
     cout<<"\nOutput result from Functional Program, between 30 and 80: " << endl << endl;
     for(auto& anElement : oDeque)
